@@ -1,33 +1,78 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
 define e = Character("Eileen")
 
 
-# The game starts here.
-
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
     show eileen happy
 
-    # These display lines of dialogue.
+    e "Hello! What direction do you want to go?"
 
-    e "You've created a new Ren'Py game."
+    # Testing
+    menu:
+        "{b}Choose a direction:{/b}"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+        "Right":
+            $ go_to_next(possibilities_right)
+        "Left":
+            $ go_to_next(possibilities_left)
+        "Up":
+            $ go_to_next(possibilities_up)
+        "Down":
+            $ go_to_next(possibilities_down)
 
-    # This ends the game.
+    return
+
+
+label room_right:
+    e "Now you are in the right room!"
+
+    menu:
+        "{b}You want to go back?{/b}"
+
+        "Yes":
+            $ go_to_next(possibilities_right)
+        "No":
+            return
+
+    return
+
+label room_left:
+    e "Now you are in the left room!"
+
+    menu:
+        "{b}You want to go back?{/b}"
+
+        "Yes":
+            $ go_to_next(possibilities_left)
+        "No":
+            return
+
+    return
+
+label room_up:
+    e "Now you are in the up room!"
+
+    menu:
+        "{b}You want to go back?{/b}"
+
+        "Yes":
+            $ go_to_next(possibilities_up)
+        "No":
+            return
+
+    return
+
+label room_down:
+    e "Now you are in the down room!"
+
+    menu:
+        "{b}You want to go back?{/b}"
+
+        "Yes":
+            $ go_to_next(possibilities_down)
+        "No":
+            return
 
     return
