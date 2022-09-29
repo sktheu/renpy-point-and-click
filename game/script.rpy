@@ -28,6 +28,8 @@ label start:
 label room_right:
     scene bg room_right
 
+    show eileen happy
+
     e "Now you are in the right room!"
 
     menu:
@@ -42,6 +44,8 @@ label room_right:
 
 label room_left:
     scene bg room_left
+
+    show eileen happy
 
     e "Now you are in the left room!"
 
@@ -58,6 +62,8 @@ label room_left:
 label room_up:
     scene bg room_up
 
+    show eileen happy
+
     e "Now you are in the up room!"
 
     menu:
@@ -72,6 +78,8 @@ label room_up:
 
 label room_down:
     scene bg room_down
+
+    show eileen happy
 
     e "Now you are in the down room!"
 
