@@ -3,7 +3,7 @@ define e = Character("Eileen")
 
 
 label start:
-    scene bg room
+    scene bg start
 
     show eileen happy
 
@@ -26,6 +26,8 @@ label start:
 
 
 label room_right:
+    scene bg room_right
+
     e "Now you are in the right room!"
 
     menu:
@@ -39,6 +41,8 @@ label room_right:
     return
 
 label room_left:
+    scene bg room_left
+
     e "Now you are in the left room!"
 
     menu:
@@ -52,6 +56,8 @@ label room_left:
     return
 
 label room_up:
+    scene bg room_up
+
     e "Now you are in the up room!"
 
     menu:
@@ -65,6 +71,8 @@ label room_up:
     return
 
 label room_down:
+    scene bg room_down
+
     e "Now you are in the down room!"
 
     menu:
